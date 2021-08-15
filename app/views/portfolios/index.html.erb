@@ -5,5 +5,5 @@
    <p><%= cheese.subtitle%></p>
    <p><%= cheese.body%></p>
    
-    <%=image_tag cheese.thumb_image %>  
+    <%=image_tag cheese.thumb_image unless cheese.thumb_image.nil? %>  
 <%end%>

@@ -1,0 +1,9 @@
+<h1>Port items </h1>
+
+<% @portfolio_items.each do |cheese| %>
+   <p><%= cheese.title%></p>
+   <p><%= cheese.subtitle%></p>
+   <p><%= cheese.body%></p>
+   
+    <%=image_tag cheese.thumb_image %>  
+<%end%>

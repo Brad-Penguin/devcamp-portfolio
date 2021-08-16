@@ -3,6 +3,7 @@
 <%= link_to "Create New Item", new_portfolio_path  %>
 
 <% @portfolio_items.each do |cheese| %>
+<hr>
    <p><%= link_to cheese.title, portfolio_path(:id => cheese.id)%></p>
    <p><%= cheese.subtitle%></p>
    <p><%= cheese.body%></p>
@@ -10,4 +11,5 @@
     <%=image_tag cheese.thumb_image unless cheese.thumb_image.nil? %>  
 
     <%= link_to "Edit", edit_portfolio_path(:id => cheese.id)  %>
+     <%= link_to "Delete Post", portfolio_path(:id => cheese.id), method: :delete, data: {confirm: 'are you souuoore'} %>
 <%end%>
